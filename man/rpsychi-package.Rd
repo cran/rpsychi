@@ -24,8 +24,8 @@ even if a researcher do not report effect size in a published work.
 \tabular{ll}{
 Package: \tab rpsychi\cr
 Type: \tab Package\cr
-Version: \tab 0.0\cr
-Date: \tab 2010-02-5\cr
+Version: \tab 0.1\cr
+Date: \tab 2010-02-7\cr
 License: \tab GPL (version 2 or later)\cr
 LazyLoad: \tab yes\cr
 }
@@ -45,12 +45,15 @@ Cohen J (1988). Statistical power analysis for the behavioral sciences (2nd ed).
 
 Cohen J, Cohen P, Aiken LS (2003) Applied multiple regression/correlation analysis for the behavioral sciences (3rd ed). Mahwah, NJ: Erlbaum.
 
+Iwasaki M (2002) Foundations of incomplete data analysis (in Japanese) Tokyo: EconomistSha Publishing.
 
 Kline RB (2004) Beyond significance testing: Reforming data analysis methods in behavioral research. Washington: American Psychological Association.
 
 Smithson M (2001) Correct confidence intervals for various regression effect sizes and parameters: The importance of noncentral distributions in computing intervals, 61, 605-632.
 
-http://blue.zero.jp/yokumura/
+Tabachnick BG, Fidell LS (2007) Experimental designs using ANOVA. Belmont, CA: Thomson. 
+
+Toyoda H (1998) Introduction to structural equation modeling (in Japanese) Tokyo: Asakura Publishing.
 }
 
 

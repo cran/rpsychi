@@ -1,0 +1,7 @@
+Changes in version: rpsychi_0.1
+
+  o a bug was fixed in dep.t.test().
+  o ind.twoway.second() was added
+  o power.f2() was added
+  
+

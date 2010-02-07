@@ -11,7 +11,6 @@
 power.f(u, n, delta, sig.level = 0.05)
 }
 
-%- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{u}{degree of freedom of the numerator of the F ratio}
   \item{n}{sample size}
@@ -20,7 +19,7 @@ power.f(u, n, delta, sig.level = 0.05)
 }
 
 \value{
-    Return a numeric contains the statistical power.
+    Return a numeric containing the statistical power.
 }
 
 

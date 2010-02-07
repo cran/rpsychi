@@ -10,13 +10,15 @@
 
 
 \usage{
-    dep.t.test(formula, data, sig.level=.05, digits=3)
+    dep.t.test(formula, data, block, 
+                    sig.level=.05, digits=3)
 }
 
 \arguments{
   \item{formula}{two-sided formula; the left-hand-side of which gives one dependent variable containing a numeric variable, 
   and the right-hand-side of one independent variable containing a factor with two levels}
   \item{data}{a data frame contains the variables in the \code{fomrmula}}
+  \item{block}{a character string specify the blocking variable}
   \item{sig.level}{a numeric contains the significance level (default 0.05)}
   \item{digits}{the specified number of decimal places (default 3)}
 }
@@ -50,7 +52,8 @@ dat <- data.frame(y = c(9,12,13,15,16,8,12,11,10,14),
                   x =  rep(factor(c("a","b")), each=5),
                   subj = rep(paste("s", 1:5, sep=""), times=2)
                   )
-dep.t.test(y~x, data=dat)
+dep.t.test(y~x, block="subj", data=dat)
+
 }
 \keyword{design}
 \keyword{htest}
