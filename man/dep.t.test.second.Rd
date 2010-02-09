@@ -52,16 +52,18 @@ dat <- data.frame(y = c(9,12,13,15,16,8,12,11,10,14),
                   x =  rep(factor(c("a","b")), each=5),
                   subj = rep(paste("s", 1:5, sep=""), times=2)
                   )
+datwide <- reshape(dat, direction="wide", idvar="subj", timevar="x")
+
 dep.t.test.second(m = tapply(dat$y, dat$x, mean),
                   sd = tapply(dat$y, dat$x, sd),
                   n = nlevels(dat$subj),
-                  corr = cor(dat$y[dat$x=="a"], dat$y[dat$x=="b"])
+                  corr = cor(datwide[,2:3])[1,2]
                   )
 
 dep.t.test.second(m = tapply(dat$y, dat$x, mean),
                   sd = tapply(dat$y, dat$x, sd),
                   n = 30,
-                  corr = cor(dat$y[dat$x=="a"], dat$y[dat$x=="b"])
+                  corr = cor(datwide[,2:3])[1,2]
                   )
 }
 \keyword{design}

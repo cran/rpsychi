@@ -1,7 +1,11 @@
-Changes in version: rpsychi_0.1
 
-  o a bug was fixed in dep.t.test().
-  o ind.twoway.second() was added
-  o power.f2() was added
+Changes in version: rpsychi_0.2 (2010-02-09)
+  o dep.t.test.Rd: correction of a bug in the example section
+  o ind.oneway.second.Rd, ind.twoway.second.Rd, rpsychi-package.Rd: update the reference to Cohen B
+  o ind.twoway.R, ind.twoway.Rd: add new function for two-way analysis of variance using individual data  
   
+  
+Changes in version: rpsychi_0.1 (2010-02-07)
+  o dep.t.test.R: correction of a bug
+  o ind.twoway.second.R, ind.twoway.second.Rd, power.f2.R, power.f2.Rd: add new function for two-way analysis of variance using published work
 

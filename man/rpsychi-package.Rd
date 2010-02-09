@@ -24,8 +24,8 @@ even if a researcher do not report effect size in a published work.
 \tabular{ll}{
 Package: \tab rpsychi\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
-Date: \tab 2010-02-7\cr
+Version: \tab 0.2\cr
+Date: \tab 2010-02-9\cr
 License: \tab GPL (version 2 or later)\cr
 LazyLoad: \tab yes\cr
 }
@@ -39,6 +39,8 @@ LazyLoad: \tab yes\cr
         \email{yokumura@blue.zero.jp} } 
 
 \references{
+Cohen B (2000) Calculating a factorial ANOVA from means and standard deviations. Understanding Statistics, 1, 191-203.
+
 Cohen J (1992) A power primer. Psychological Bulletin, 112, 155-159.
 
 Cohen J (1988). Statistical power analysis for the behavioral sciences (2nd ed). Hillsdale, NJ: Erlbaum.

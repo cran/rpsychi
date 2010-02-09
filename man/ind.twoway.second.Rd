@@ -45,6 +45,8 @@ Statistical power is calculated using the following specifications:
 }
 
 \references{
+Cohen B (2000) Calculating a factorial ANOVA from means and standard deviations. Understanding Statistics, 1, 191-203.
+
 Cohen J (1992) A power primer. Psychological Bulletin, 112, 155-159.
 
 Kline RB (2004) Beyond significance testing: Reforming data analysis methods in behavioral research. Washington: American Psychological Association.
@@ -61,7 +63,17 @@ Tabachnick BG, Fidell LS (2007) Experimental designs using ANOVA. Belmont, CA: T
 } 
 
 
+\seealso{\code{\link{ind.twoway}}}
+
 \examples{
+##Cohen (2000) Table 1
+m.mat  <- matrix(c(37.13, 39.31, 39.22, 32.71), ncol=2) #2 * 2
+sd.mat <- matrix(c(13.82, 9.42, 9.43, 9.62), ncol=2)
+n.mat <- matrix(c(9, 13, 8, 14), ncol=2)
+
+ind.twoway.second(m = m.mat, sd = sd.mat, n = n.mat)
+
+
 ##Tabachnick and Fidell (2007) 
 #5.7 Complete example of two-way randomized-groups ANOVA (p.221-236)
 m.mat <- matrix(c(837.9, 573.6, 354.9, 699.0, 112.0, 
@@ -71,7 +83,6 @@ sd.mat <- matrix(c(189.87449, 61.31195, 147.93351, 128.51891, 43.36922,
 n.mat <- matrix(rep(10, 10), ncol=2)
 
 ind.twoway.second(m = m.mat, sd = sd.mat, n = n.mat)
-
 
 
 ##Kline (2004) Table 7.5
@@ -84,7 +95,6 @@ ind.twoway.second(m = tapply(dat$y, list(dat$A,dat$B), mean),
                   sd = tapply(dat$y, list(dat$A,dat$B), sd), 
                   n = tapply(dat$y, list(dat$A,dat$B), length)
                     )
-
 }
 
 

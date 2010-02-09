@@ -47,6 +47,8 @@ Statistical power is calculated using the following specifications:
 }
 
 \references{
+Cohen B (2000) Calculating a factorial ANOVA from means and standard deviations. Understanding Statistics, 1, 191-203.
+
 Cohen J (1992) A power primer. Psychological Bulletin, 112, 155-159.
 
 Kline RB (2004) Beyond significance testing: Reforming data analysis methods in behavioral research. Washington: American Psychological Association.
