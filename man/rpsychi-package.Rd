@@ -7,25 +7,15 @@
 Statistics for psychiatric research
 }
 \description{
-The rpsychi offers a number of functions for psychiatry, 
-psychiatric nursing, clinical psychology. 
-Functions are primarily for statistical significance testing using published work. 
-For example, you can conduct a factorial analysis of variance (ANOVA), which requires only the mean, 
-standard deviation, and sample size for each cell, rather than the individual data. 
-This package covers fundamental statistical tests such as t-test, chi-square test, 
-analysis of variance, and multiple regression analysis. 
-With some exceptions, you can obtain effect size and its confidence interval. 
-These functions help you to obtain effect size from published work, 
-and then to conduct a priori power analysis or meta-analysis, 
-even if a researcher do not report effect size in a published work.
+The rpsychi offers a number of functions for psychiatry, psychiatric nursing, clinical psychology. Functions are primarily for statistical significance testing using published work. For example, you can conduct a factorial analysis of variance (ANOVA), which requires only the mean, standard deviation, and sample size for each cell, rather than the individual data. This package covers fundamental statistical tests such as t-test, chi-square test, analysis of variance, and multiple regression analysis. With some exceptions, you can obtain effect size and its confidence interval. These functions help you to obtain effect size from published work, and then to conduct a priori power analysis or meta-analysis, even if a researcher do not report effect size in a published work.
 }
 
 \details{
 \tabular{ll}{
 Package: \tab rpsychi\cr
 Type: \tab Package\cr
-Version: \tab 0.2\cr
-Date: \tab 2010-02-9\cr
+Version: \tab 0.4\cr
+Date: \tab 2011-09-07\cr
 License: \tab GPL (version 2 or later)\cr
 LazyLoad: \tab yes\cr
 }

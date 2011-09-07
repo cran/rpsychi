@@ -1,8 +1,12 @@
+Changes in version: rpsychi_0.4 (2011-09-07)
+  o Corrected fatal errors in version 0.3 relating to aggregate()
+
+
 Changes in version: rpsychi_0.3 (2011-09-06)
   o formatted.R, formatted.Rd: add new function for printing output
-  o dep.t.test: correction of a bug
-  o dep.oneway: correction of a bug
-  o do not depend the library(doBy)
+  o dep.t.test.R: correction of a bug
+  o dep.oneway.R: correction of a bug
+  o Did not depend the library(doBy)
 
 
 Changes in version: rpsychi_0.2 (2010-02-09)
