@@ -58,7 +58,7 @@ dep.oneway(formula = y~x, data=dat, block="subj")
 
 datwide <- reshape(dat, direction="wide", idvar="subj", timevar="x")
 tmp <- datwide[,-1]
-dep.oneway.second(m = mean(tmp), sd(tmp), n = nrow(tmp), corr=cor(tmp))
+dep.oneway.second(m = apply(tmp, 2, mean), apply(tmp, 2, sd), n = nrow(tmp), corr=cor(tmp))
 
 
 

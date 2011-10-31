@@ -7,7 +7,7 @@
     \code{ind.prop.second} conducts a Z test for the equality of two proportions using published work. 
 }
 \usage{
-ind.prop.second(x, n, sig.level = 0.05, digits = 3)
+ind.prop.second(x, n, sig.level = 0.05, digits = 3, ref.ind=1)
 }
 
 \arguments{
@@ -15,6 +15,7 @@ ind.prop.second(x, n, sig.level = 0.05, digits = 3)
   \item{n}{a numeric vector (length(\code{n}) = 2) contains the sample sizes}
   \item{sig.level}{a numeric contains the significance level (default 0.05)}
   \item{digits}{the specified number of decimal places (default 3)}
+  \item{ref.ind}{the reference for the independent variable (default 1)}
 }
 \details{
 This function conducts a Z test for the equality of two proportions using published work. 
@@ -56,7 +57,17 @@ Kline RB (2004) Beyond significance testing: Reforming data analysis methods in 
 
 \examples{
 ##Kline (2004) Chapter 5
-ind.prop.second(x=c(60, 40), n = c(100,100))
+x1 <- c("relapsed", "not relapsed")
+y1 <- c("control", "treatment")
+
+dat <- data.frame(y =         
+factor(c(rep(x1, c(60, 40)), rep(x1, c(40, 60))), levels=x1),
+x = factor(rep(y1, each=100), levels=y1)
+)
+tab <- xtabs(~x+y, data=dat)
+tab
+ind.prop.second(x=tab[,1], n = rowSums(tab))             #Risk for relapse is lower in treatment than control condition.
+ind.prop.second(x=tab[,1], n = rowSums(tab), ref.ind=2)  #Risk for relapse is higher in control than treatment condition.
 }
 
 \keyword{design}

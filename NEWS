@@ -1,3 +1,12 @@
+Changes in version: rpsychi_0.6 (2011-10-31)
+  o ind.t.teset.second.R: create a specification for estimating unbiased standardized mean difference.
+  o ind.t.teset.R: create a specification for estimating unbiased standardized mean difference.
+
+Changes in version: rpsychi_0.5 (2011-10-29)
+  o ind.prop.R: modify specifications of reference for independent and dependent variable.
+  o ind.prop.second.R: modify specifications of reference for independent variable.
+
+
 Changes in version: rpsychi_0.4 (2011-09-07)
   o Corrected fatal errors in version 0.3 relating to aggregate()
 

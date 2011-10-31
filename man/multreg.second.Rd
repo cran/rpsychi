@@ -97,7 +97,7 @@ cits = c(50, 26, 50, 34, 41, 37, 48, 56, 19, 29,
 
 multreg.second(salary~ pubs + cits, corr=cor(dat), n= nrow(dat))
 multreg.second(salary~ pubs + cits, corr=cor(dat), n= nrow(dat), 
-        m = mean(dat), sd=sd(dat))
+        m = apply(dat, 2, mean), sd=apply(dat, 2, sd))
 }
 
 \keyword{design}

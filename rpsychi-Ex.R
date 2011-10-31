@@ -77,7 +77,7 @@ dep.oneway(formula = y~x, data=dat, block="subj")
 
 datwide <- reshape(dat, direction="wide", idvar="subj", timevar="x")
 tmp <- datwide[,-1]
-dep.oneway.second(m = mean(tmp), sd(tmp), n = nrow(tmp), corr=cor(tmp))
+dep.oneway.second(m = apply(tmp, 2, mean), apply(tmp, 2, sd), n = nrow(tmp), corr=cor(tmp))
 
 
 
@@ -291,8 +291,12 @@ dat <- data.frame(y =
 factor(c(rep(x1, c(60, 40)), rep(x1, c(40, 60))), levels=x1),
 x = factor(rep(y1, each=100), levels=y1)
 )
-ind.prop(y~x, data=dat) #count relapse
-ind.prop(y~x, data=dat, lev.prop=2) #count not relapse
+tab <- xtabs(~x+y, data=dat)
+tab
+ind.prop(y~x, data=dat, lev.count=2, ref.ind=1)    #Odds for not relapse is higher in treatment than control condition.
+ind.prop(y~x, data=dat, lev.count=1, ref.ind=1)    #Odds for relapse is lower in treatment than control condition.
+ind.prop(y~x, data=dat, lev.count=2, ref.ind=2)    #Odds for not relapse is lower in control than treatment condition.
+ind.prop(y~x, data=dat, lev.count=1, ref.ind=2)    #Odds for relapse is higher in control than treatment condition.
 
 
 
@@ -311,7 +315,17 @@ flush(stderr()); flush(stdout())
 ### ** Examples
 
 ##Kline (2004) Chapter 5
-ind.prop.second(x=c(60, 40), n = c(100,100))
+x1 <- c("relapsed", "not relapsed")
+y1 <- c("control", "treatment")
+
+dat <- data.frame(y =         
+factor(c(rep(x1, c(60, 40)), rep(x1, c(40, 60))), levels=x1),
+x = factor(rep(y1, each=100), levels=y1)
+)
+tab <- xtabs(~x+y, data=dat)
+tab
+ind.prop.second(x=tab[,1], n = rowSums(tab))             #Risk for relapse is lower in treatment than control condition.
+ind.prop.second(x=tab[,1], n = rowSums(tab), ref.ind=2)  #Risk for relapse is higher in control than treatment condition.
 
 
 
@@ -332,7 +346,7 @@ flush(stderr()); flush(stdout())
 dat <- data.frame(y = c(9,12,13,15,16,8,12,11,10,14),
                   x =  rep(factor(c("a","b")), each=5)
                   )
-ind.t.test(y~x, data=dat)
+ind.t.test(y~x, data=dat, correct=FALSE)
 
 
 
@@ -355,8 +369,12 @@ dat <- data.frame(y = c(9,12,13,15,16,8,12,11,10,14),
                   )
 ind.t.test.second(m = tapply(dat$y, dat$x, mean),
                   sd = tapply(dat$y, dat$x, sd),
-                  n = tapply(dat$y, dat$x, length)
+                  n = tapply(dat$y, dat$x, length), correct=FALSE
                   )
+ind.t.test.second(m = tapply(dat$y, dat$x, mean),
+                  sd = tapply(dat$y, dat$x, sd),
+                  n = tapply(dat$y, dat$x, length), correct=TRUE
+                  )     #approximate unbiased estimator of delta
 
 
 
@@ -567,7 +585,7 @@ cits = c(50, 26, 50, 34, 41, 37, 48, 56, 19, 29,
 
 multreg.second(salary~ pubs + cits, corr=cor(dat), n= nrow(dat))
 multreg.second(salary~ pubs + cits, corr=cor(dat), n= nrow(dat), 
-        m = mean(dat), sd=sd(dat))
+        m = apply(dat, 2, mean), sd=apply(dat, 2, sd))
 
 
 
@@ -711,11 +729,12 @@ flush(stderr()); flush(stdout())
 ##data(iris) 
 x <- iris[,1:4] 
 cov(x)
-r2cov(sd(x), cor(x)) 
+r2cov(apply(x, 2, sd), cor(x)) 
+
 
 ##Toyoda (1998) p.34 
 r2cov(sd = sqrt(c(.862, 1.089, 0.606)), 
-      R = lower2R(c(.505, -0.077, -.233)))         
+      R = lower2R(c(.505, -0.077, -.233)))
 
 
 

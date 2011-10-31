@@ -1,4 +1,5 @@
-ind.t.test.second <- function(m, sd, n, unbiased=TRUE, sig.level=.05,digits=3){
+ind.t.test.second <-
+function(m, sd, n, unbiased=TRUE, correct=TRUE, sig.level=.05, digits=3){
 
 m1 <- as.numeric(m[1]); m2 <- as.numeric(m[2])
 sd1 <- as.numeric(sd[1]); sd2 <- as.numeric(sd[2])
@@ -25,6 +26,11 @@ n1 <- as.numeric(n[1]); n2 <- as.numeric(n[2])
 ##(c) standardized mean difference
   g     <- psi/sqrt(sp.sq)
   g.std <- sqrt(((g^2)/(2*dfw)) + (n1+n2)/(n1*n2))
+  if(correct==TRUE){
+    c.m <- (1 - 3/(4*dfw - 1))
+    g <-  c.m * g
+    g.std <- sqrt(((g^2)/(2*dfw)) + (n1+n2)/(n1*n2))
+  }  
   g.lower <- g + g.std * qnorm(sig.level/2)
   g.upper <- g + g.std * qnorm(sig.level/2, lower.tail=FALSE)
   standardized.difference <- round(c(es=g, lower=g.lower, upper=g.upper, std=g.std), digits)
@@ -40,3 +46,4 @@ n1 <- as.numeric(n[1]); n2 <- as.numeric(n[2])
   output <- list(samp.stat=samp.stat, raw.difference=raw.difference, standardized.difference=standardized.difference, power=criterion.power)
   return(output)
 }
+

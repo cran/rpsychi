@@ -5,10 +5,9 @@
 \title{A Z test for the equality of two proportions using individual data}
 \description{
     \code{ind.prop} conducts a Z test for the equality of two proportions using individual data.
-}
-\usage{
-ind.prop(formula, data, sig.level=.05, digits=3, lev.prop=1)
-}
+} 
+
+\usage{ ind.prop(formula, data, sig.level=.05, digits=3, lev.count=2, ref.ind=1) } 
 
 \arguments{
   \item{formula}{two-sided formula; the left-hand-side of which gives one dependent variable containing a factor with two levels, 
@@ -16,7 +15,8 @@ ind.prop(formula, data, sig.level=.05, digits=3, lev.prop=1)
   \item{data}{a data frame contains the variables in the \code{fomrmula}}
   \item{sig.level}{a numeric contains the significance level (default 0.05)}
   \item{digits}{the specified number of decimal places (default 3)}
-  \item{lev.prop}{a numeric contains the level to be counted (default 1)}
+  \item{lev.count}{a numeric contains the level to be counted (default 2)}
+  \item{ref.ind}{the reference for the independent variable (default 1)}
 }
 \details{
 This function conducts a Z test for the equality of two proportions using individual data. 
@@ -66,10 +66,13 @@ dat <- data.frame(y =
 factor(c(rep(x1, c(60, 40)), rep(x1, c(40, 60))), levels=x1),
 x = factor(rep(y1, each=100), levels=y1)
 )
-ind.prop(y~x, data=dat) #count relapse
-ind.prop(y~x, data=dat, lev.prop=2) #count not relapse
+tab <- xtabs(~x+y, data=dat)
+tab
+ind.prop(y~x, data=dat, lev.count=2, ref.ind=1)    #Odds for not relapse is higher in treatment than control condition.
+ind.prop(y~x, data=dat, lev.count=1, ref.ind=1)    #Odds for relapse is lower in treatment than control condition.
+ind.prop(y~x, data=dat, lev.count=2, ref.ind=2)    #Odds for not relapse is lower in control than treatment condition.
+ind.prop(y~x, data=dat, lev.count=1, ref.ind=2)    #Odds for relapse is higher in control than treatment condition.
 }
-
 \keyword{design}
 \keyword{htest}
 

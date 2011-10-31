@@ -8,7 +8,7 @@
    \code{ind.t.test} conducts a t-test with independent samples using individual data. 
 }
 \usage{
-ind.t.test(formula, data, 
+ind.t.test(formula, data, correct=TRUE,
                 sig.level = 0.05, digits = 3)
 }
 
@@ -16,6 +16,7 @@ ind.t.test(formula, data,
   \item{formula}{two-sided formula; the left-hand-side of which gives one dependent variable containing a numeric variable, 
   and the right-hand-side of one independent variable containing a factor with two levels}
   \item{data}{a data frame contains the variables in the \code{fomrmula}}
+  \item{correct}{a logical indicating whether to compute an unbiased standardized mean difference (\eqn{delta}) or not (\code{correct} = TRUE)}
   \item{sig.level}{a numeric contains the significance level (default 0.05)}
   \item{digits}{the specified number of decimal places (default 3)}
 }
@@ -62,7 +63,7 @@ Kline RB (2004) Beyond significance testing: Reforming data analysis methods in 
 dat <- data.frame(y = c(9,12,13,15,16,8,12,11,10,14),
                   x =  rep(factor(c("a","b")), each=5)
                   )
-ind.t.test(y~x, data=dat)
+ind.t.test(y~x, data=dat, correct=FALSE)
 }
 
 \keyword{design}
