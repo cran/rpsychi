@@ -2,7 +2,7 @@
 \name{ind.t.test.second}
 \alias{ind.t.test.second}
 
-\title{A t-test with independent samples using published work}
+\title{A t-test with independent samples using published work: Reporting effect size}
 \description{
    \code{ind.t.test.second} conducts a t-test with independent samples using published work. 
 }

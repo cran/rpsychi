@@ -2,7 +2,7 @@
 \name{dep.oneway}
 \alias{dep.oneway}
 
-\title{A one-way design with dependent samples using individual data}
+\title{A one-way design with dependent samples using individual data: Reporting effect size}
 
 \description{
     \code{dep.oneway} conducts a one-way design with dependent samples, namely one-way repeated-measures analysis of variance, using individual data. 

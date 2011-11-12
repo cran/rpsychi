@@ -14,8 +14,8 @@ The rpsychi offers a number of functions for psychiatry, psychiatric nursing, cl
 \tabular{ll}{
 Package: \tab rpsychi\cr
 Type: \tab Package\cr
-Version: \tab 0.6\cr
-Date: \tab 2011-10-31\cr
+Version: \tab 0.7\cr
+Date: \tab 2011-11-12\cr
 License: \tab GPL (version 2 or later)\cr
 LazyLoad: \tab yes\cr
 }

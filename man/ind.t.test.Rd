@@ -2,7 +2,7 @@
 \name{ind.t.test}
 \alias{ind.t.test}
 
-\title{A t-test with independent samples using individual data}
+\title{A t-test with independent samples using individual data: Reporting effect size}
 
 \description{
    \code{ind.t.test} conducts a t-test with independent samples using individual data. 

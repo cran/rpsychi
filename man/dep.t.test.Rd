@@ -2,7 +2,7 @@
 \name{dep.t.test}
 \alias{dep.t.test}
 
-\title{A t-test with dependent samples using individual data}
+\title{A t-test with dependent samples using individual data: Reporting effect size}
 
 \description{
   \code{dep.t.test} conducts a t-test with dependent samples using individual data. 

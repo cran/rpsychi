@@ -3,7 +3,8 @@
 \alias{ind.oneway}
 
 
-\title{A one-way design with independent samples using individual data}
+\title{A one-way design with independent samples using 
+individual data: Reporting effect size} 
 
 \description{
     \code{ind.oneway} conducts a one-way design with independent samples, namely one-way randomized-group analysis of variance, using individual data. 

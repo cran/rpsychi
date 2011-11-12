@@ -2,7 +2,7 @@
 \name{ind.prop.second}
 \alias{ind.prop.second}
 
-\title{A Z test for the equality of two proportions using published work}
+\title{A Z test for the equality of two proportions using published workc}
 \description{
     \code{ind.prop.second} conducts a Z test for the equality of two proportions using published work. 
 }

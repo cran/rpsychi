@@ -1,7 +1,7 @@
 \encoding{UTF-8}
 \name{dep.oneway.second} 
-\alias{dep.oneway.second} 
-\title{A one-way design with dependent samples using published work} 
+\alias{dep.oneway.second}
+\title{A one-way design with dependent samples using published work: Reporting effect size} 
 \description{ 
     \code{dep.oneway.second} conducts a one-way design with dependent samples, namely one-way repeated-measures analysis of variance, using published work. 
 }

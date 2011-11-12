@@ -2,7 +2,7 @@
 \name{dep.t.test.second}
 \alias{dep.t.test.second}
 
-\title{A t-test with dependent samples using published work}
+\title{A t-test with dependent samples using published work: Reporting effect size}
 
 \description{
   \code{dep.t.test.second} conducts a t-test with dependent samples using published work. 

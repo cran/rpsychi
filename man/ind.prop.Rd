@@ -2,7 +2,7 @@
 \name{ind.prop}
 \alias{ind.prop}
 
-\title{A Z test for the equality of two proportions using individual data}
+\title{A Z test for the equality of two proportions using individual data: Reporting effect size}
 \description{
     \code{ind.prop} conducts a Z test for the equality of two proportions using individual data.
 } 

@@ -2,7 +2,7 @@
 \name{ind.oneway.second}
 \alias{ind.oneway.second}
 
-\title{A one-way design with independent samples using published work}
+\title{A one-way design with independent samples using published work: Reporting effect size}
 \description{
     \code{ind.oneway.second} conducts a one-way design with independent samples, namely one-way randomized-group analysis of variance, using published work. 
 }

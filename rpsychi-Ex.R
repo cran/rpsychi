@@ -31,7 +31,8 @@ nameEx("dep.oneway")
 flush(stderr()); flush(stdout())
 
 ### Name: dep.oneway
-### Title: A one-way design with dependent samples using individual data
+### Title: A one-way design with dependent samples using individual data:
+###   Reporting effect size
 ### Aliases: dep.oneway
 ### Keywords: design htest
 
@@ -60,7 +61,8 @@ nameEx("dep.oneway.second")
 flush(stderr()); flush(stdout())
 
 ### Name: dep.oneway.second
-### Title: A one-way design with dependent samples using published work
+### Title: A one-way design with dependent samples using published work:
+###   Reporting effect size
 ### Aliases: dep.oneway.second
 ### Keywords: design htest
 
@@ -100,7 +102,8 @@ nameEx("dep.t.test")
 flush(stderr()); flush(stdout())
 
 ### Name: dep.t.test
-### Title: A t-test with dependent samples using individual data
+### Title: A t-test with dependent samples using individual data: Reporting
+###   effect size
 ### Aliases: dep.t.test
 ### Keywords: design htest
 
@@ -123,7 +126,8 @@ nameEx("dep.t.test.second")
 flush(stderr()); flush(stdout())
 
 ### Name: dep.t.test.second
-### Title: A t-test with dependent samples using published work
+### Title: A t-test with dependent samples using published work: Reporting
+###   effect size
 ### Aliases: dep.t.test.second
 ### Keywords: design htest
 
@@ -211,7 +215,8 @@ nameEx("ind.oneway")
 flush(stderr()); flush(stdout())
 
 ### Name: ind.oneway
-### Title: A one-way design with independent samples using individual data
+### Title: A one-way design with independent samples using individual data:
+###   Reporting effect size
 ### Aliases: ind.oneway
 ### Keywords: design htest
 
@@ -240,7 +245,8 @@ nameEx("ind.oneway.second")
 flush(stderr()); flush(stdout())
 
 ### Name: ind.oneway.second
-### Title: A one-way design with independent samples using published work
+### Title: A one-way design with independent samples using published work:
+###   Reporting effect size
 ### Aliases: ind.oneway.second
 ### Keywords: design htest
 
@@ -277,7 +283,7 @@ flush(stderr()); flush(stdout())
 
 ### Name: ind.prop
 ### Title: A Z test for the equality of two proportions using individual
-###   data
+###   data: Reporting effect size
 ### Aliases: ind.prop
 ### Keywords: design htest
 
@@ -308,7 +314,7 @@ flush(stderr()); flush(stdout())
 
 ### Name: ind.prop.second
 ### Title: A Z test for the equality of two proportions using published
-###   work
+###   workc
 ### Aliases: ind.prop.second
 ### Keywords: design htest
 
@@ -336,7 +342,8 @@ nameEx("ind.t.test")
 flush(stderr()); flush(stdout())
 
 ### Name: ind.t.test
-### Title: A t-test with independent samples using individual data
+### Title: A t-test with independent samples using individual data:
+###   Reporting effect size
 ### Aliases: ind.t.test
 ### Keywords: design htest
 
@@ -357,7 +364,8 @@ nameEx("ind.t.test.second")
 flush(stderr()); flush(stdout())
 
 ### Name: ind.t.test.second
-### Title: A t-test with independent samples using published work
+### Title: A t-test with independent samples using published work:
+###   Reporting effect size
 ### Aliases: ind.t.test.second
 ### Keywords: design htest
 
