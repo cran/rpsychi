@@ -1,10 +1,11 @@
-lower2R <- function(x, varname=NULL){
+lower2R <-
+function(x, varname=NULL){
   temp <- function(y){
     (y ^2 - y)/2 - length(x)
   }
 
   if(length(x) != 1){
-    ncol <- floor(uniroot(temp, interval=c(0, length(x)))$root)
+    ncol <- round(uniroot(temp, interval=c(0, length(x)))$root)
   }else{
     ncol <- 2
   }

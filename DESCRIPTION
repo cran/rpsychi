@@ -1,7 +1,7 @@
 Package: rpsychi
 Title: Statistics for psychiatric research
-Version: 0.7
-Date: 2011-11-12
+Version: 0.8
+Date: 2012-01-03
 Author: Yasuyuki Okumura <yokumura@blue.zero.jp>
 Maintainer: Yasuyuki Okumura <yokumura@blue.zero.jp>
 Depends: gtools
@@ -10,6 +10,6 @@ License: GPL (>= 2)
 URL: http://blue.zero.jp/yokumura/
 LazyLoad: yes
 Encoding: UTF-8
-Packaged: 2011-11-12 04:38:31 UTC; Yasuyuki Okumura
+Packaged: 2012-01-03 03:09:53 UTC; Yasuyuki Okumura
 Repository: CRAN
-Date/Publication: 2011-11-12 16:15:39
+Date/Publication: 2012-01-03 08:12:22
